@@ -1,0 +1,12 @@
+/*CREATE DATABASE flask_login_2024_2025;
+USE flask_login_2024_2025;
+
+CREATE TABLE user(
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(30) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    fullname VARCHAR(50) NOT NULL
+);*/
+
+USE flask_login_2024_2025;
+INSERT INTO user VALUES(NULL, 'luis', 'scrypt:32768:8:1$5swStEUo8ngXglSv$5d83ded407c9d1fafdb1fac81f701aea0708b86c4268567bc30bb2aaa855e134d68126bbc07c8eee166b0183553015b58aaf7d375ffff6519aa8558122ee4fe7', 'Luis Garcia')
