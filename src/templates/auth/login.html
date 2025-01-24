@@ -16,7 +16,19 @@
     width="300"
     height="150"
   />
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  {% for msg in messages %}
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{ msg }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+
   <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
   <div class="form-floating">
     <input
       type="text"
